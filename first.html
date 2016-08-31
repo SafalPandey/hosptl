@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <title>Hospital Informer</title>
     <style type="text/css">
-        .font {
-            font-family: "Times New Roman", cursive;
-            font-size: 36px;
-            background-color: #3c54ff;
+        .back {
+            background-size: 100%;
+            background:url("half.jpg");
+            -webkit-background-size:cover;
+            -o-background-size:cover;
+            -moz-background-size:cover;
+            background-size:cover;
+            background-repeat: no-repeat;
+
         }
+        .font {
+            font-family: "Comic Sans MS", cursive;
+            font-size: 36px;
+            background-color: #0F6;
+        }
+        #menu ul{
+            margin:0px;
+            padding:0px;
+            list-style-type:none;
+        }
+        #menu a{
+            display:block;
+            color:#FFF;
+            width:8cm;
+            text-decoration:blink;
+
+            text-align:center;
+            background-color:#C00;
+
+        }
+        #menu a:hover{
+            background-color:#9F0;
+        }
+        #menu li
+        {
+            float:left;
+            margin-right :0.5cm;
+        }
+
     </style>
 </head>
 <body>
-<div align="center" class="font">
-    Hospital Informer
+<div align="center" class="font">Hospital Informer</div>
+<div id ="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.htm">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </div>
-<div class="container">
-    <div align="left">
-        <h1> A conversation at the Doctor's:-</h1>
-    </div>
 
-        <div >
-            <p><strong>Hey There!!!</strong> <em>How You Doin'?</em> </p> </div>
-        <div align="left" class="font"><h6><small> I'm Doin' Fine.</small></h6></div>
-    </div>
-
-    <p><em>I can't hear you man. You're speaking too <small> softly</small>. Be <strong>LOUD!!!</strong></em></p>
-    <p>    </p>
-
-    <h2> This problem is removed by our application.</h2>
-
-</body></html>
+</body><body class="back">
+</html>
