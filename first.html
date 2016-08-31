@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Hospital Informer</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         .back {
-            background-size: 100%;
-            background:url("half.jpg");
-            -webkit-background-size:cover;
-            -o-background-size:cover;
-            -moz-background-size:cover;
-            background-size:cover;
-            background-repeat: no-repeat;
+
+            background-color: #53b253;
+
 
         }
-        .font {
-            font-family: "Comic Sans MS", cursive;
-            font-size: 36px;
-            background-color: #0F6;
-        }
-        #menu ul{
-            margin:0px;
-            padding:0px;
-            list-style-type:none;
-        }
-        #menu a{
-            display:block;
-            color:#FFF;
-            width:8cm;
-            text-decoration:blink;
 
-            text-align:center;
-            background-color:#C00;
-
-        }
-        #menu a:hover{
-            background-color:#9F0;
-        }
-        #menu li
-        {
-            float:left;
-            margin-right :0.5cm;
-        }
 
     </style>
 </head>
 <body>
-<div align="center" class="font">Hospital Informer</div>
-<div id ="menu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.htm">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
+<div class="container">
+    <div class="jumbotron" align="center"><h1><strong>Hospital Informer</strong></h1></div>
 
-</body><body class="back">
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search</button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!--/.div container fluid-->
+    </nav>
+
+</div>
+<script src="scripts/jquery.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="scripts/bootstrap.min.js"></script>
+
+</body><body class="back"></body>
 </html>
