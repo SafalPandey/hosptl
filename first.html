@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Hospital Informer</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #map {
+            height: 400px;
+            width: 70%;
+            margin-bottom: 2%;
+            background-color: #53b253;
+        }
+    </style>
     <style type="text/css">
         .back {
 
@@ -61,10 +69,48 @@
         </div><!--/.div container fluid-->
     </nav>
 
+    <div id="map"></div>
 </div>
+
+
 <script src="scripts/jquery.min.js"></script>
 <!-- Bootstrap JavaScript -->
 <script src="scripts/bootstrap.min.js"></script>
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 34.397, lng: 150.644},
+            zoom: 18
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
 
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('Location found.');
+                map.setCenter(pos);
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Olx25SZ6BAdtAzL8Xbc1XkAC2IhdAQU&callback=initMap"></script>
 </body><body class="back"></body>
 </html>
