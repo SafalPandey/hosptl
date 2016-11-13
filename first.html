@@ -91,10 +91,24 @@
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
+                var image = {
+                    url: 'User.png',
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(16, 18),
+                    scaledSize: new google.maps.Size(30, 30)
+                };
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon: image
+                });
+
 
                 infoWindow.setPosition(pos);
                 infoWindow.setContent('Location found.');
                 map.setCenter(pos);
+
             }, function() {
                 handleLocationError(true, infoWindow, map.getCenter());
             });
