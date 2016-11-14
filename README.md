@@ -1,5 +1,3 @@
 # hosptl
 
-A Web Based Application that lists all nearby Hospitals and services available in those hotpitals.
-
-sahi ho :p
+A Web Based Application that lists all nearby Hospitals and Shows directions to get to them.
